@@ -1,5 +1,6 @@
 
-var myUsername = "A01047477";
+var robUsername = "A01047477";
+var justinUsername = "A01044627";
 var myPassword = "password"
 
 exports.login = (req, res, next) => {
@@ -14,7 +15,7 @@ exports.login = (req, res, next) => {
 
 exports.loginAttempt = (req, res, next) => {
     let {username, password} = req.body;
-    if(username === myUsername && password === myPassword) {
+    if((username === myUsername || robUsername === justinUsername) && password === myPassword) {
         res.redirect(301, '/artists');
     } else {
         res.redirect(301, '/login');
