@@ -30,9 +30,9 @@ let loginRoutes = require('./routes/loginRoutes');
 app.use(loginRoutes);
  
 app.get('/', (req, res, next) => {
-    res.render('index', { 
-        pageTitle: 'Robert Ozdoba Home Page',
-        css: 'index',
+    res.render('login', { 
+        pageTitle: 'Artist Directory',
+        css: 'login',
         requiresJS: false
     });
 });
