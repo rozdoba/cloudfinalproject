@@ -1,0 +1,17 @@
+<div id="artist-container">
+    {{#each artists}}
+        <div class="artist" id="{{this.ArtistID}}">
+            <div class="artist-image">
+                <img src={{this.URL}}>
+            </div>
+            <div class="artist-description">
+                <p>{{this.Name}}</p>
+                <p>{{this.Description}}</p>
+            </div>
+            <form id="delete-artist-form" method="POST" action="/artists/delete">
+                <input type="hidden" name="id" value="{{this.ArtistID}}">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    {{/each}}
+</div>

@@ -1,0 +1,164 @@
+body {
+    background-color: #F0E9E4;
+    font-family: 'Nunito', sans-serif;
+}
+
+#directory-container {
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgb(248, 245, 244);
+    border: 0.1em solid grey;
+}
+
+#title-container p {
+    padding-left: 20px;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#directory {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+#search-artist-form {
+    order: 1;
+    display: flex;
+    width: 70%;
+    height: 30px;
+}
+
+#search-input {
+    order: 1;
+    width: 100%;
+    margin-right: 5px;
+}
+
+#search-button {
+    order: 2;
+    margin-right: 5px;
+}
+
+#add-button {
+    order: 2;
+}
+
+.directory-button {
+    background: grey;
+    width: 60px;
+}
+
+/* #artistadd-button-container {
+    order: 2;
+    margin: 0 auto;
+    width: 15%
+} */
+
+#form-container {
+    width: 50%;
+    margin: 0 auto;
+    display: none;
+}
+
+#submit-button {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#form-container input {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.artist:hover {
+    background-color:rgb(224, 224, 223);
+}
+
+#artist-container {
+    width: 50%;
+    margin: 0 auto;
+    background-color:rgb(248, 245, 244);
+}
+
+.artist {
+    display: flex;
+    order: 1;
+    min-height: 80px;
+    border: 0.1em solid grey;
+}
+
+.artist-image {
+    vertical-align: middle;
+    border-radius: 15%;
+    padding: 10px;
+}
+
+.artist-description {
+    display: inline;
+    order: 2;
+    text-align: top;
+    padding-left: 5px;
+    width: 60%;
+}
+
+#delete-artist-form {
+    order: 3;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: table-cell;
+    vertical-align: middle;
+    width: 15%;
+}
+
+.artist button {
+    height: 25px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 14%;
+    background-color: red;
+    color: white;
+}
+
+p {
+    color: black;
+    font-family: "Palatino Linotype", "Book Antiqua", "serif";
+}
+
+.artist-description p:first-child {
+    font-weight: bold;
+    color: black;
+    font-size: 20px; 
+}
+
+
+#navigation-bar {
+    list-style-type: none;
+    margin-bottom: 25px;
+    overflow: hidden;
+    background-color: orange;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#logout-form {
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    padding-right: 25px;
+}
+
+#logout-button {
+    height: 30px;
+    width: 50px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
+    color: white;
+    border: none;
+}

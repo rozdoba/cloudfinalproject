@@ -1,0 +1,24 @@
+<body>
+    {{>navbarPartial}}
+    <div id="directory-container">
+        <div id="title-container">
+            <p>{{heading}}</p>
+        </div>
+        <div id="directory">
+            <form id="search-artist-form" method="POST" action="/artists/search">
+                <input id="search-input" name="searchKey">
+                <button id="search-button" class="directory-button" type="submit">Search</button>
+            </form>
+            <button id="add-button" class="directory-button" onclick="toggleForm()">Add</button>
+        </div>
+    </div>
+    <div id="form-container">
+        <form id="artist-form" method="POST" action="/artists/add">
+            <input type="text" placeholder="Artist Name" name="name" maxlength="40">
+            <input type="text" placeholder="About Artist" name="description" maxlength="40">
+            <input type="url" placeholder="Image url" name="url">
+            <input id="submit-button" type="submit" value="Add">
+        </form>
+    </div>
+    {{>artistsPartial}}
+</body>

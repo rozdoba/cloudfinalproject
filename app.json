@@ -1,0 +1,8 @@
+{
+    "name": "Cloud Final Project Heroku",
+    "description": "Our Cloud Final Project",
+    "repository": "https://github.com/rozdoba/cloudfinalproject.git",
+    "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+    "keywords": ["node", "express", "heroku"],
+    "image": "heroku/nodejs"
+}
