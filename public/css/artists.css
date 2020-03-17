@@ -98,6 +98,10 @@ body {
     padding: 10px;
 }
 
+.artist-image img {
+    max-width: 72px;
+}
+
 .artist-description {
     display: inline;
     order: 2;
