@@ -100,6 +100,7 @@ body {
 
 .artist-image img {
     max-width: 72px;
+    max-height: 72px;
 }
 
 .artist-description {

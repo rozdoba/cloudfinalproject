@@ -15,7 +15,8 @@ exports.login = (req, res, next) => {
 
 exports.loginAttempt = (req, res, next) => {
     let {username, password} = req.body;
-    if((username === robUsername || username === justinUsername) && password === myPassword) {
+    if((username.toLowerCase() === robUsername.toLowerCase() 
+        || username.toLowerCase() === justinUsername.toLowerCase()) && password === myPassword) {
         res.redirect(301, '/artists');
     } else {
         res.redirect(301, '/login');
