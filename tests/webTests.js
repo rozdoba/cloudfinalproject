@@ -3,10 +3,13 @@ const webdriver = require('selenium-webdriver'),
     until = webdriver.until;
 const chrome = require('selenium-webdriver/chrome')
 
-const driver = new webdriver.Builder()
-    .forBrowser('chrome')
-    .setChromeOptions(new chrome.Options().addArguments('--headless'))
-    .build();
+// const driver = new webdriver.Builder()
+//     .forBrowser('chrome')
+//     .setChromeOptions(new chrome.Options().addArguments('--headless'))
+//     .build();
+
+const driver = webdriver.Chrome(executable_path=r'/usr/local/bin/chromedriver')
+.setChromeOptions(new chrome.Options().addArguments('--headless'))
 
 const loginTest = async () => {
   await driver.get("https://cloudfinalproject.herokuapp.com/")
