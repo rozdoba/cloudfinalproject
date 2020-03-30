@@ -1,9 +1,11 @@
 const webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
+const chrome = require('selenium-webdriver/chrome')
 
 const driver = new webdriver.Builder()
     .forBrowser('chrome')
+    .setChromeOptions(new chrome.Options().addArguments('--headless'))
     .build();
 
 const logintest = async () => {
