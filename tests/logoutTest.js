@@ -1,23 +1,28 @@
-const { Builder, By, Key, until } = require('selenium-webdriver')
-const assert = require('assert')
+const webdriver = require('selenium-webdriver'),
+    By = webdriver.By,
+    until = webdriver.until;
 
-describe('logoutTest', function() {
-  this.timeout(30000)
-  let driver
-  let vars
-  beforeEach(async function() {
-    driver = await new Builder().forBrowser('chrome').build()
-    vars = {}
-  })
-  afterEach(async function() {
+const driver = new webdriver.Builder()
+    .forBrowser('chrome')
+    .build();
+
+const logouttest = async () => {
+  await driver.get("https://cloudfinalproject.herokuapp.com/artists")
+  await driver.manage().window().setRect(1280, 692)
+  await driver.findElement(By.id("logout-button")).click()
+  await driver.findElement(By.id("username-input")).click()
+  await driver.findElement(By.id("password-input")).click()
+  await driver.findElement(By.id("login-button")).click()
+  driver.quit();
+}
+
+(async () => {
+  try{
+    await logouttest()
+    console.log("Logout test success")
+  }catch (error){
     await driver.quit();
-  })
-  it('logoutTest', async function() {
-    await driver.get("https://cloudfinalproject.herokuapp.com/artists")
-    await driver.manage().window().setRect(1280, 692)
-    await driver.findElement(By.id("logout-button")).click()
-    await driver.findElement(By.id("username-input")).click()
-    await driver.findElement(By.id("password-input")).click()
-    await driver.findElement(By.id("login-button")).click()
-  })
-})
+    console.log("Logout test failed")
+  }
+})()
+
