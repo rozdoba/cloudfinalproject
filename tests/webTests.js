@@ -2,8 +2,9 @@ const webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
 const chrome = require('selenium-webdriver/chrome')
+const driverpath = require('chromedriver').path;
 
-var service = new chrome.ServiceBuilder('/usr/local/bin/chromedriver').build();
+var service = new chrome.ServiceBuilder(driverpath).build();
 chrome.setDefaultService(service);
 
 const driver = new webdriver.Builder()
