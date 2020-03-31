@@ -1,3 +1,3 @@
 #!/bin/bash
 
-node ./tests/webTests > selenium-test-results.log
+node ./tests/webTests.js > selenium-test-results.log
