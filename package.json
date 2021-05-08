@@ -22,7 +22,7 @@
     "chromedriver": "^80.0.1",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "handlebars": "^4.7.3",
+    "handlebars": "^4.7.7",
     "mysql2": "^2.1.0",
     "selenium-webdriver": "^4.0.0-alpha.7"
   }
